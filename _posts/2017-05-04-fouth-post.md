@@ -1,11 +1,11 @@
 ---
-title: How I discovered my passion
+title: Exploring Facebook Ad Strategy
 subtitle: This is a witty subtitle
 image_path: /images/placeholder-2.jpg
 layout: post
 banner-image_path: /images/placeholder-2.jpg
 categories:
-  - travel
+  - girl boss
   - entrepreneurship
 ---
 

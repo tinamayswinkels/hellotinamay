@@ -1,5 +1,5 @@
 ---
-title: How I discovered my passion
+title: Adventures around Ubud
 subtitle: This is a witty subtitle
 image_path: /images/placeholder-1.jpg
 layout: post
