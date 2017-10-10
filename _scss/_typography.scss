@@ -1,0 +1,84 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5, p {
+  margin:1em 0 0.5em;
+}
+h2:first-child,
+h3:first-child {
+  margin-top:0;
+}
+
+h1, h2 {
+  font-weight: 300;
+  font-size: 2.3rem;
+}
+h3 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+p, a {
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+  color: rgb(90,90,95);
+}
+
+
+.sub /* sub heading style */ {
+    text-transform: uppercase;
+    color: rgb(120,120,120);
+}
+/* Other elements */
+
+hr {
+  border: none;
+  border-bottom: 2px solid $color-featured;
+  width: 3.5rem;
+  margin: 1rem 0;
+}
+hr.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* buttons */
+
+.button {
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  border: 1px solid $color-featured;
+  color: $color-featured;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  border-color: $color-dark;
+  color: $color-dark;
+}
+
+
+.post h2 {
+  font-size: 1.8rem;
+}
+
+/* Tags */
+
+span.tag {
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgb(180,180,180);
+  color: rgb(180,180,180);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  font-weight: normal;
+  margin-right: 0.1rem;
+}
+@media(max-width: 768px) {
+  h1, h2 {
+    font-size: 2rem;
+  }
+}

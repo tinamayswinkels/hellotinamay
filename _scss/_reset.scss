@@ -1,0 +1,34 @@
+* {
+  box-sizing  : border-box;
+  margin      : 0;
+  padding     : 0;
+
+  // border: 1px solid rgb(240,240,240);
+}
+html {
+  overflow-x: hidden;
+  font-size: 14px;
+    color: rgb(60,60,60);
+}
+
+img {
+  max-width : 100%;
+}
+
+li {
+  list-style-position: inside;
+  font-weight: 300;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+}
+p, li {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+[class*=col-], [class*=col_], [class~=col] {
+  padding: 0;
+}

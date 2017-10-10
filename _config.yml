@@ -1,0 +1,22 @@
+sass:
+    sass_dir: _scss
+
+categories:
+  - travel
+  - women-in-tech
+  - bali
+  - coding
+  - business
+
+# gems:
+#   - jekyll-archives
+#
+# jekyll-archives:
+#   enabled: true
+#   layout: 'archive'
+#   permalinks:
+#     year: '/:year/'
+#     month: '/:year/:month/'
+#     day: '/:year/:month/:day/'
+#     tag: '/tag/:name/'
+#     category: '/category/:name/'
