@@ -4,32 +4,94 @@ layout: default
 
 <section class="banner overlay" style="background-image:url('{{page.banner-image_path}}');">
   <div class="banner-inner">
-      <h1> {{page.title}} </h1>
-      <p> {{page.subtitle}} </p>
+      <h1 class="fancy"> {{page.title}} </h1>
+
+  </div>
+  <div class="banner-lower">
+    <p>
+        {% for category in page.categories %}
+        <span class="tag"> {{category}}</span>
+        {% endfor %}
+    </p>
+    <p class="info"> by {{page.author}} in {{page.date | date: "%B %Y" }}</p>
   </div>
 </section>
 
 <section class="padded grid post">
-  <div class="col-8_xs-12 padded-2">
-   {{content}}
+  <!-- Main Container -->
+  <div class="col-8_xs-12">
+
+    <!-- main blog post -->
+    <div class="padded margin-2 white">
+      <h2> {{page.title}}</h2>
+      <p class="info"> by {{page.author}} in {{page.date | date: "%B %Y" }}</p>
+      {{content}}
+    </div>
+
+    <!-- social sharing -->
+    <div class="padded margin-2 white">
+       <h3 class="script"> share the love </h2>
+       <nav class="social">
+         <a href="#" target="_blank"> F </a>
+         <a href="#" target="_blank"> I </a>
+         <a href="#" target="_blank"> P </a>
+         <a href="#" target="_blank"> F </a>
+       </nav>
+    </div>
+
+    <!-- read next featured blog posts  -->
+    <div class="padded margin-2 white">
+       <h3 class="script"> read next </h2>
+       <div class="grid">
+
+       {% for post in site.posts limit:3 %}
+             <a class="col-4_sm-12 padded-2" href="{{post.url}}">
+               <h4> {{post.title}}</h4>
+               <div class="bg-image p-50" style="background-image:url('{{post.image_path}}')"></div>
+           </a>
+       {% endfor %}
+
+       </div>
+    </div>
+    <!-- comments section -->
+    <div class="padded margin-2 white">
+      <h3 class="script">comments</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <!-- end comments section -->
+
   </div>
+  <!-- End Main Container -->
 
-
-  <div class="col-4_xs-12">
-    <div class="margin-2 padded sidebar">
-      <h2> About Tina May</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <!-- - - - - - Sidebar - - - - - - - -->
+  <div class="col-4_xs-12 sidebar">
+    <div class="margin-2">
+      <div class="padded">
+        <h2> oh hey there</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <img src="/images/placeholder-1.jpg" />
     </div>
-    <div class="margin-2 padded sidebar">
-      <h2> Recent Posts</h2>
-      {% for post in site.posts %}
-
-        <a href="{{post.url}}" class="padded-2 block">
-          <h4> {{post.title}}</h4>
-          <div class="bg-image p-50" style="background-image:url('{{post.image_path}}')"></div>
-
-        </a>
+    <div class="margin-2 padded center">
+      <h2> explore </h2>
+      <p>
+      {% for category in page.categories %}
+      <span class="tag">{{category}}</span>
       {% endfor %}
+      </p>
     </div>
-
+    <div class="margin-2 padded">
+      <h2>collaborate</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+      <a href="#" class="button">Get in Touch</a>
+    </div>
+    <div class="margin-2">
+      <div class="padded">
+        <h2>learn to code</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <a href="#" class="button">Learn More</a>
+      </div>
+      <img src="/images/placeholder-2.jpg" />
+    </div>
+  </div><!-- end sidebar -->
 </section>

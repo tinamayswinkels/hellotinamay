@@ -1,29 +1,30 @@
 ---
 layout: default
-title: SBE Home Page
+title: Hello Tina May | Entrepreneur & Lifestyle Blogger
 banner-image_path: /images/placeholder-1.jpg
 ---
 
 <section class="banner overlay" style="background-image:url('{{page.banner-image_path}}');">
     <div class="banner-inner">
-      <h2> hello tina may </h2>
-      <p> ENTREPRENEUR | DEVELOPER | EXPLORER </p>
+      <h2 class="fancy">hello<span> tina may</span></h2>
+      <!-- <p> A 20-something entrepreneur exploring the world</p> -->
   </div>
 </section>
 
-<section class="padded center">
-  <h2> oh hey there </h2>
-  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+<section class="padded center narrow">
+  <h2 class="script">oh hey there </h2>
+  <p class="emphasis">There are 86,400 seconds in every day. I'm on a mission to discover ways to make the most out of each and every one of them. From entrepreneurship and lifestyle design enabling me to live a location-independent life in Bali, to health and wellness hacks that give me more energy and productivity I'm exploring it all. Want to come along for the ride?  </p>
+  <a href="http://facebook.com/hellotinamay" class="button" target="blanks">Follow me</a>
 </section>
 <section class="post-loop featured-bg">
 
   {% for post in site.posts limit:10 %}
     <div class="post-block grid">
         <!--post image -->
-        <div class="col-6_sm-12 bg-image" style="background-image:url('{{post.image_path}}')"></div>
+        <div class="col-6_sm-12 bg-image p-50" style="background-image:url('{{post.image_path}}')"></div>
 
         <!-- post text block -->
-        <div class="col-6_xs-12">
+        <div class="col-6_sm-12-middle">
            <div class="padded text-box">
             <h3> {{post.title}}</h3>
             <p>
@@ -40,4 +41,9 @@ banner-image_path: /images/placeholder-1.jpg
       </div>
   {% endfor %}
 
+</section>
+<section class="padded center narrow">
+  <h2 class="script"> work with me </h2>
+  <p> I've worked with small businesses and startups all over the world helping them with their marketing, customer experience and digital strategy. In 2 years with no external funding I grew my startup, Institute of Code, to over $500k in revenue and have taught over 250 students from around the world ... it's been a rollercoaster of a journey, and sharing the lessons I've learned as well as being honest and vulnerable about the struggles is something that I am so passionate about. I'm available for speaking engagements to large and small crowds, startup and marketing consulting, and the occaisional web development project. Think you have a project that might be a good fit? Let's chat. </p>
+  <a href="/contact" class="button">Let's Chat</a>
 </section>

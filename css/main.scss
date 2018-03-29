@@ -5,14 +5,25 @@ $font-body: "macho",'Lato', sans-serif;
 $font-heading: "macho",'Lato', sans-serif;
 
 $color-body: #41414D;
-$color-featured: #59b350;
+$color-featured: #D99DA8;
 $color-featured-f: white;
 $color-dark: #41414D;
 $color-dark-f: white;
 $color-light: #fafafc;
 $color-light-f: rgb(80,80,80);
 
+@font-face {
+    font-family: 'trendsetter-Regular';
+    src:url('/fonts/trendsetter-Regular.ttf.woff') format('woff'),
+        url('/fonts/trendsetter-Regular.ttf.svg#trendsetter-Regular') format('svg'),
+        url('/fonts/trendsetter-Regular.ttf.eot'),
+        url('/fonts/trendsetter-Regular.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @import 'reset';
 @import 'nav';
 @import 'universal';
 @import 'typography';
+@import 'gridlex';

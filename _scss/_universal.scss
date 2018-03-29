@@ -8,8 +8,18 @@
 .full-height {min-height:100vh }
 
 .padded {     padding: 5%;  }
+
+div.padded {  padding: 3rem; }
+
 .padded-2 {   padding: 2%;  }
 .no-padding { padding: 0;   }
+
+.margin-2 { margin: 2vw 1vw ;}
+
+.narrow {
+  max-width: 1100px;
+  margin: auto;
+}
 
 .block {
   display: block;
@@ -29,6 +39,7 @@
 .columns p:first-child {  margin-top:0; }
 
 .light-bg  { background-color: rgb(250,250,250);  }
+.white {background: white;}
 
 .featured-bg {
   background-color: #F7ECEE; /* pink */
@@ -55,7 +66,12 @@
   padding:10%;
 }
 
-
+@media(max-width:767px){
+    .post-loop .post-block:nth-child(odd) .text-box,
+    .post-loop .post-block:nth-child(even) .text-box {
+        margin: -2rem 2rem 2rem 2rem;
+    }
+}
 
 /* Banners */
 
@@ -64,10 +80,13 @@
   background-position: center;
   min-height: 90vh;
   position: relative;
-  z-index: -1;
+  // z-index: -1;
   align-items: center;
   justify-content: center;
   display: flex;
+}
+.small.banner {
+  min-height: 50vh;
 }
 .overlay:after {
   content: '';
@@ -76,7 +95,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   z-index:1;
 }
 
@@ -86,6 +105,15 @@
   padding: 5%;
   z-index:2;
 }
+
+.banner-lower {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+.banner-lower .tag {color: white;}
 
 /* Image block with text overlay */
 
@@ -103,15 +131,24 @@
 
 /* Blog post */
 
-.sidebar {
+.post {
+  background-color: #F7ECEE;
+}
+
+.sidebar > div {
   border: 1px solid rgb(240,240,240);
   color: rgb(90,90,90);
-  margin: 1rem 0;
+  margin: 2vw 1vw;
+  background-color: white;
 }
 
 .sidebar h2,
 .sidebar h3 {
   margin-top:0;
+}
+
+.sidebar img {
+  display:block;
 }
 
 /* About Page */
