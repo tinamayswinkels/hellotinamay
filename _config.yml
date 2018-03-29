@@ -11,6 +11,8 @@ categories:
   - coding
   - business
 
+permalink: /:title/
+
 # gems:
 #   - jekyll-archives
 #
